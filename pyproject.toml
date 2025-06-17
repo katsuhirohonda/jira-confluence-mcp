@@ -1,0 +1,12 @@
+[project]
+name = "jira-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "atlassian-python-api>=4.0.4",
+    "mcp>=1.9.4",
+    "pydantic>=2.11.7",
+    "python-dotenv>=1.1.0",
+]
