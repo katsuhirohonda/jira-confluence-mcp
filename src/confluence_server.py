@@ -423,7 +423,7 @@ class ConfluenceMCPServer:
             await self.server.run(
                 read_stream=read_stream,
                 write_stream=write_stream,
-                init_options={}
+                initialization_options={}
             )
 
 
