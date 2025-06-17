@@ -69,7 +69,7 @@ Claude Desktopの設定ファイル（`~/Library/Application Support/Claude/clau
 {
   "mcpServers": {
     "jira": {
-      "command": "/path/to/jira-mcp/run_jira.sh",
+      "command": "/path/to/jira-confluence-mcp/run_jira.sh",
       "args": [],
       "env": {
         "JIRA_URL": "https://your-domain.atlassian.net",
@@ -79,7 +79,7 @@ Claude Desktopの設定ファイル（`~/Library/Application Support/Claude/clau
       }
     },
     "confluence": {
-      "command": "/path/to/jira-mcp/run_confluence.sh",
+      "command": "/path/to/jira-confluence-mcp/run_confluence.sh",
       "args": [],
       "env": {
         "CONFLUENCE_URL": "https://your-domain.atlassian.net",
@@ -93,7 +93,7 @@ Claude Desktopの設定ファイル（`~/Library/Application Support/Claude/clau
 ```
 
 **注意**: 
-- `/path/to/jira-mcp/`の部分は実際のプロジェクトパスに置き換えてください
+- `/path/to/jira-confluence-mcp/`の部分は実際のプロジェクトパスに置き換えてください
 - APIトークンは[Atlassianアカウント設定](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/)から生成できます
 - `run_jira.sh`と`run_confluence.sh`は、プロジェクトルートにあるシェルスクリプトです
 
