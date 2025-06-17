@@ -6,7 +6,8 @@ import json
 
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
-from mcp.types import Tool, TextContent, Resource
+from mcp.server.models import InitializationOptions
+from mcp.types import Tool, TextContent, Resource, ServerCapabilities
 from pydantic import Field, BaseModel
 from atlassian import Confluence
 from dotenv import load_dotenv
@@ -420,10 +421,17 @@ class ConfluenceMCPServer:
     async def run(self):
         """Run the MCP server"""
         async with stdio_server() as (read_stream, write_stream):
+            init_options = InitializationOptions(
+                server_name="confluence-mcp",
+                server_version="1.0.0",
+                capabilities=ServerCapabilities(
+                    tools={}
+                )
+            )
             await self.server.run(
                 read_stream=read_stream,
                 write_stream=write_stream,
-                initialization_options={}
+                initialization_options=init_options
             )
 
 
